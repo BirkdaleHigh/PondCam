@@ -20,3 +20,5 @@ var server = http.createServer(function(req, res){
 
 // Listen
 server.listen(3000)
+console.log("Server listening on: 3000")
+console.log("If blank find IP of MAC: 00-0b-82-6f-06-eb")
