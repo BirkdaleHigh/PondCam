@@ -1,7 +1,7 @@
 var Stream = require('node-rtsp-stream')
 var stream = new Stream({
     name: 'pond',
-    streamUrl: 'rtsp://10.101.2.164:554/0',
+    streamUrl: 'rtsp://10.101.2.159:554/0',
     wsPort: 9999
 })
 
