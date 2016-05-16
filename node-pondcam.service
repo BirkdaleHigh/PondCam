@@ -1,0 +1,12 @@
+[Service]
+ExecStart=/usr/bin/node /home/srv-node-pondcam/PondCam/app.js
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=pondcam
+User=srv-node-pondcam
+Group=srv-node-pondcam
+Environment=NODE_ENV=production
+
+[Install]
+WantedBy=multi-user.target
