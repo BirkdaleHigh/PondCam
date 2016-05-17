@@ -1,8 +1,11 @@
+var port = process.env.NODE_PORT || 3000
+var wsPort = process.env.NODE_WSPORT || 9999
+
 var Stream = require('node-rtsp-stream')
 var stream = new Stream({
     name: 'pond',
     streamUrl: 'rtsp://10.101.2.159:554/0',
-    wsPort: 9999
+    wsPort: wsPort
 })
 
 var finalhandler = require('finalhandler')
@@ -19,6 +22,6 @@ var server = http.createServer(function(req, res){
 })
 
 // Listen
-server.listen(3000)
-console.log("Server listening on: 3000")
+server.listen(port)
+console.log("Server listening on: " + port)
 console.log("If blank find IP of MAC: 00-0b-82-6f-06-eb")
