@@ -6,6 +6,7 @@ StandardError=syslog
 SyslogIdentifier=pondcam
 User=srv-node-pondcam
 Group=srv-node-pondcam
+Environment=NODE_PORT=13337
 Environment=NODE_ENV=production
 
 [Install]

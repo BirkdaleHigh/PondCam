@@ -1,0 +1,16 @@
+[Unit]
+Description=Test entry for running under systemd configuration.
+
+[Service]
+ExecStart=/usr/bin/npm run test
+Restart=no
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=pondcam-test
+User=srv-node-pondcam
+Group=srv-node-pondcam
+Environment=NODE_PORT=13338
+Environment=NODE_ENV=development
+
+[Install]
+WantedBy=multi-user.target
